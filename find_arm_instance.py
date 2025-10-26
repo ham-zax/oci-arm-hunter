@@ -1,6 +1,7 @@
 import oci
 import time
 import logging
+import random
 
 # --- Configuration ---
 CONFIG_FILE_LOCATION = "./.oci/config"
@@ -63,8 +64,8 @@ while True:
         # =================================================================
         # === FINAL FIX: Make this check more general for any capacity error ===
         if "capacity" in e.message.lower():
-            wait_seconds = 60
-            logging.warning(f"Out of capacity in {AVAILABILITY_DOMAIN}. Retrying in {wait_seconds} seconds...")
+            wait_seconds = random.randint(180, 420)
+            logging.warning(f"Out of capacity in {AVAILABILITY_DOMAIN}. Retrying in {wait_seconds} seconds ({wait_seconds/60:.1f} minutes)...")
             time.sleep(wait_seconds)
         # =================================================================
         else:
