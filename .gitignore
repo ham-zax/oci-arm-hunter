@@ -8,3 +8,4 @@ venv/
 # IDE and cache files
 __pycache__/
 .vscode/
+oci_instance_launch.log
