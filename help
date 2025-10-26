@@ -1,0 +1,9 @@
+ssh ubuntu@161.118.173.145 -i "C:/Users/Hamza/Downloads/ssh-key-2025-10-26 (2).key"
+
+tmux attach -t oci-hunter
+
+ctrl b + d to exit 
+
+---
+tmux new -s oci-hunter
+---
