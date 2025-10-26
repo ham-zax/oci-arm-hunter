@@ -1,0 +1,10 @@
+# Python virtual environment
+venv/
+
+# OCI sensitive files
+.oci/
+*.pem
+
+# IDE and cache files
+__pycache__/
+.vscode/
